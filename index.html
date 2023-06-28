@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campo Minado</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<header style="display: flex;">
+  <h1>Campo Minado</h1>
+  <div id="contagem">
+    <label for="quantity">&#128163;</label>
+    <div id="counter"></div>
+  </div>
+  <button class="botao recomecar" onclick="recomecar()">Escolher Nível</button>
+  
+</header>
+
+<body>
+  <div id="menu">
+    <div class="menu">
+      <div class="fundo"></div>
+      <div class="nivel">
+        <p class="escolha">Escolha a dificuldade:</p>
+        <div id="diff">
+          <label>Dificuldade:</label>
+          <select id="dificuldade">
+            <option value="0" selected>Fácil</option>
+            <option value="1">Intermediário</option>
+            <option value="2">Difícil</option>
+          </select>
+        </div>
+        <button class="botao iniciar" onclick="iniciarButton()">Jogar</button>
+      </div>
+    </div>
+  </div>
+  <div id="jogo">
+    
+    <table id="tabela">
+    </table>
+  </div>
+</body>
+
+</html>

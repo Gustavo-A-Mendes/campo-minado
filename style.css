@@ -1,0 +1,308 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: #211e32;
+  position: relative;
+}
+
+header {
+  height: 10vh;
+  display: flex;
+  /* margin: 10px; */
+  align-items: center;
+  justify-content: space-between;
+  color: #437;
+  background-color: #a9d;
+  text-align: center;
+  
+  border: groove 5px #215;
+}
+
+h1 {
+  margin: 10px;
+}
+
+button {
+  padding: 10px;
+  border: solid 3px #215;
+  border-radius: 5px;
+  /* background-color: aliceblue; */
+  background-image: radial-gradient(#f0f8ff 0%,  #8877bb 99%);
+}
+button:hover {
+  background-image: radial-gradient(#fff 0%,  #bbaaee 99%);
+}
+button:active {
+  background-image: radial-gradient(#b7c5cc 0%,  #554488 99%);
+}
+
+div {
+  text-align: center;
+}
+
+#menu {
+  z-index: 2;
+  height: 90vh;
+  width: 100vw;
+  user-select: none;
+
+  
+  position: absolute;
+}
+
+.menu {
+  height: 90vh;
+  width: 100vw;
+  position: relative;
+  align-self: center;
+}
+
+.fundo {
+  height: 90vh;
+  width: 100vw;
+  background-color: aliceblue;
+  opacity: 0.5;
+  position: absolute;
+
+  filter: blur(1px);
+}
+.nivel {
+  position: absolute;
+  height: 90vh;
+  width: 100vw;
+  
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  filter: none;
+}
+
+.escolha,
+#diff,
+.botao {
+  margin: 10px;
+}
+
+#tabela {
+  user-select: none;
+  /* background-color: #557; */
+  background-color: #cbf;
+  margin: auto;
+  border: solid 1px;
+  /* height: 700px; */
+  /* width: 500px; */
+  border-collapse: collapse;
+  position: relative;
+  
+}
+
+#jogo {
+  height: 90vh;
+  max-height: 90vh;
+  width: 100vw;
+  max-width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  position: absolute;
+}
+
+p,
+label {
+  color: black;
+  font-weight: bold;
+}
+
+#contagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#counter {
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  border: solid 3px #215;
+  border-radius: 10px;
+  background-color: white;
+
+}
+
+td {
+  /* scale: 1.0; */
+  margin: auto;
+  height: 30px;
+  /* height: calc(10% - 5px); */
+  /* min-height: 30px; */
+  width: 30px;
+  /* width: calc(25% -10px); */
+  /* min-width: 30px; */
+}
+
+.position {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* text-align: center; */
+  font-weight: bold;
+  /* margin: auto; */
+  background-color: #cbf;
+}
+
+.block,
+.number,
+.blank,
+.flag,
+.invisible {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 100%;
+  height: 100%;
+}
+
+.block,
+.flag {
+  z-index: 1;
+  background-color: #76d;
+  border-radius: 3px;
+  transform: scale(0.9);
+  /* visibility: hidden; */
+  /* opacity: 0.5; */
+}
+
+.block:hover,
+.flag:hover {
+  cursor: pointer;
+  background-color: #98f;
+}
+
+.block:active,
+.flag:active {
+  cursor: pointer;
+  background-color: #54b;
+}
+
+.number, 
+.blank {
+  z-index: 0;
+  font-size: small;
+  background-color: #cbf;
+
+  border: solid #a3a3a3 1px;
+}
+
+.borda {
+  border: solid 1px;
+  clip-path: polygon(
+    0 20%,
+    5% 20%,
+    20% 5%,
+    20% 0,
+
+    80% 0,
+    80% 5%,
+    95% 20%,
+    100% 20%,
+    
+    100% 80%,
+    95% 80%,
+    80% 95%,
+    80% 100%,
+    
+    20% 100%,
+    20% 95%,
+    5% 80%,
+    0 80%,
+    0 20%
+  );
+}
+
+.invisible {
+  z-index: 1;
+
+  background-color: #76d;
+  border-radius: 3px;
+  transform: scale(0.9);
+
+  animation: scale .5s ease-in;
+  animation-timing-function: linear;
+  
+  transition: .5s;
+  visibility: hidden;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(.9);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(.9);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.n1, .n2, .n3, .n4, .n5, .n6, .n7, .n8 {
+  /* background-color: #eee; */
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 100%;
+  height: 100%;
+}
+
+.n1 {
+  color: blue;
+}
+
+.n2 {
+  color: green;
+}
+
+.n3 {
+  color: red;
+}
+
+.n4 {
+  color: maroon;
+}
+
+.n5 {
+  color: blueviolet;
+}
+
+.n6 {
+  color: darkgoldenrod;
+}
+
+.n7 {
+  color: orange;
+}
+
+.n8 {
+  color: tomato;
+}
