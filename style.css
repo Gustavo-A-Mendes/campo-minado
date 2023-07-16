@@ -208,6 +208,11 @@ td {
   border: solid #a3a3a3 1px;
 }
 
+.number:hover,
+.blank:hover {
+  background-color: pink;
+}
+
 .borda {
   border: solid 1px;
   clip-path: polygon(

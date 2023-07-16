@@ -91,7 +91,7 @@ function init() {
 
 
 function primeiroClick(event) {
-  if (!primeiro) {
+  if ((!primeiro) && (event.which === 1) || (event.which === 2)) {
     let celula = event.target;
     let td = celula.parentNode.parentNode;
     let linha = td.parentNode.rowIndex;
